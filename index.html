@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Accounts!</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <body>
-        
+    <body>  
+        <script>
+            // كود التهيئة
+            const firebaseConfig = {
+              apiKey: "AIzaSyAqULI0iTdoDHls5QMvehEB3jVSA3XWAXQ",
+              authDomain: "rayrayfeedback.firebaseapp.com",
+              databaseURL: "https://rayrayfeedback-default-rtdb.europe-west1.firebasedatabase.app",
+              projectId: "rayrayfeedback",
+              storageBucket: "rayrayfeedback.firebasestorage.app",
+              messagingSenderId: "340226334895",
+              appId: "1:340226334895:web:16063f0f0c468639fc345a",
+              measurementId: "G-GQ9JQEJ2YV"
+            };
+      
+            // تهيئة Firebase
+            firebase.initializeApp(firebaseConfig);
+            const database = firebase.database();
+      
+            console.log("✅ Firebase Initialized!");
+          </script>
+      
         <div class="buttons">
         <a href="https://youtube.com/@RayRay.im0" target="_blank">
             <img src="images/UPSN5689.PNG" alt="YouTube" class="btn-img">
@@ -45,6 +67,7 @@
             <ul id="feedbackItems"></ul>
         </div>
     </div>
+    <script type="module" src="firebase-config.js"></script>
 </body>
 <script src="script.js"></script>
 </html>
